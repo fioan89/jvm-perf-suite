@@ -80,19 +80,26 @@ ProcessExecutorBenchmark.processExecutorWithRandomExistingCommand     avgt   40 
 ProcessExecutorBenchmark.processExecutorWithRandomNonExistingCommand  avgt   40  52.594 ± 5.750  ms/op
 ```
 
-#### macOS 14 (Sonoma)
+#### macOS 15.5 (Sequoia) Darwin Kernel Version 24.5.0
 
-##### Apple M2 Pro - 32GB RAM - 1TB SSD
+##### Apple M4 Max - 36GB RAM - 1TB SSD
+
 ```
-Benchmark                                     Mode  Cnt     Score      Error  Units
-FileExistsBenchmark.fileExistsTrue           avgt    5     xxx.xxx ±  x.xxx  ns/op
-FileExistsBenchmark.fileExistsFalse          avgt    5     xxx.xxx ±  x.xxx  ns/op
-FileExistsBenchmark.filesExistsTrue          avgt    5     xxx.xxx ±  x.xxx  ns/op
-FileExistsBenchmark.filesExistsFalse         avgt    5     xxx.xxx ±  x.xxx  ns/op
-FileExistsBenchmark.filesExistsTrueVarying   avgt    5     xxx.xxx ±  x.xxx  ns/op
-FileExistsBenchmark.filesExistsFalseVarying  avgt    5     xxx.xxx ±  x.xxx  ns/op
-FileExistsBenchmark.filesExistsThroughputPerSecond  thrpt  5  xxx.xxx ±  x.xxx  ops/s
-FileExistsBenchmark.filesExistsThroughputPerMs      thrpt  5  xxx.xxx ±  x.xxx  ops/ms
+# Test Date: 2025-07-18
+# VM version: JDK 21.0.7, OpenJDK 64-Bit Server VM, 21.0.7+6-LTS
+# VM options: -Xms2G -Xmx2G
+
+Benchmark                                                             Mode  Cnt  Score   Error  Units
+FileExistsBenchmark.fileExistsOnExistingFile                          avgt  100  1.264 ± 0.010  us/op
+FileExistsBenchmark.fileExistsOnNonExistingFile                       avgt  100  1.045 ± 0.005  us/op
+FileExistsBenchmark.nioFilesExistsOnExistingFile                      avgt  100  0.831 ± 0.004  us/op
+FileExistsBenchmark.nioFilesExistsOnNonExistingFile                   avgt  100  0.876 ± 0.005  us/op
+FileExistsBenchmark.nioFilesExistsOnRandomExistingFiles               avgt  100  0.892 ± 0.004  us/op
+FileExistsBenchmark.nioFilesExistsOnRandomNonExistingFiles            avgt  100  0.931 ± 0.006  us/op
+ProcessExecutorBenchmark.processExecutorWithExistingCommand           avgt   40  1.953 ± 0.006  ms/op
+ProcessExecutorBenchmark.processExecutorWithNonExistingCommand        avgt   40  1.338 ± 0.006  ms/op
+ProcessExecutorBenchmark.processExecutorWithRandomExistingCommand     avgt   40  2.205 ± 0.066  ms/op
+ProcessExecutorBenchmark.processExecutorWithRandomNonExistingCommand  avgt   40  1.459 ± 0.020  ms/op
 ```
 
 ## Contributing
