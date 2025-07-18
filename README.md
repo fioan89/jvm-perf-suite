@@ -58,6 +58,28 @@ ProcessExecutorBenchmark.processExecutorWithRandomExistingCommand     avgt   40 
 ProcessExecutorBenchmark.processExecutorWithRandomNonExistingCommand  avgt   40    1.783 ±  0.070  ms/op
 ```
 
+#### Ubuntu 24.04.2 LTS- Linux 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+##### 11th Gen Intel(R) Core(TM) i7-11850H @ 2.50GHz, 2496 Mhz, 8 Core(s), 16 Logical Processor(s) - 64GB RAM - Model	Samsung SSD 980 1TB
+
+```
+# Test Date: 2025-07-18
+# VM version: JDK 21.0.8, OpenJDK 64-Bit Server VM, 21.0.8+9-LTS
+# VM options: -Xms2G -Xmx2G
+
+Benchmark                                                             Mode  Cnt   Score   Error  Units
+FileExistsBenchmark.fileExistsOnExistingFile                          avgt  100   0.556 ± 0.018  us/op
+FileExistsBenchmark.fileExistsOnNonExistingFile                       avgt  100   0.432 ± 0.018  us/op
+FileExistsBenchmark.nioFilesExistsOnExistingFile                      avgt  100   0.569 ± 0.017  us/op
+FileExistsBenchmark.nioFilesExistsOnNonExistingFile                   avgt  100   0.490 ± 0.013  us/op
+FileExistsBenchmark.nioFilesExistsOnRandomExistingFiles               avgt  100   0.582 ± 0.016  us/op
+FileExistsBenchmark.nioFilesExistsOnRandomNonExistingFiles            avgt  100   0.564 ± 0.023  us/op
+ProcessExecutorBenchmark.processExecutorWithExistingCommand           avgt   40   1.005 ± 0.086  ms/op
+ProcessExecutorBenchmark.processExecutorWithNonExistingCommand        avgt   40  48.910 ± 2.822  ms/op
+ProcessExecutorBenchmark.processExecutorWithRandomExistingCommand     avgt   40   1.096 ± 0.035  ms/op
+ProcessExecutorBenchmark.processExecutorWithRandomNonExistingCommand  avgt   40  52.594 ± 5.750  ms/op
+```
+
 #### macOS 14 (Sonoma)
 
 ##### Apple M2 Pro - 32GB RAM - 1TB SSD
